@@ -1,0 +1,12 @@
+﻿__pycache__/
+*.py[cod]
+.venv/
+.env/
+.ipynb_checkpoints/
+.vscode/
+
+# data & artifacts
+data/**
+!data/.gitkeep
+reports/figures/
+mlruns/
