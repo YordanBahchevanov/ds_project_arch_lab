@@ -4,6 +4,7 @@ Lab project with Poetry, src layout, and data pipeline.
 
 ## Project structure
 
+```
 ├─ config/ # configuration files (YAML)
 ├─ data/ # datasets (not tracked in Git)
 │ ├─ raw/ # original data
@@ -17,6 +18,7 @@ Lab project with Poetry, src layout, and data pipeline.
 ├─ pyproject.toml # Poetry project definition
 ├─ poetry.lock # locked dependencies
 └─ README.md
+```
 
 ## Data
 
