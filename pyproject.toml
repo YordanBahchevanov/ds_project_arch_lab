@@ -3,7 +3,7 @@ name = "ds-project-arch-lab"
 version = "0.1.0"
 description = "End-to-end data science project lab (Poetry + src layout)"
 authors = [
-    {name = "DanDan93SB",email = "yordanbah9376@gmail.com"}
+    {name = "DanDan93SB", email = "yordanbah9376@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.11,<3.13"
@@ -18,7 +18,14 @@ dependencies = [
     "ipykernel (>=6.30.1,<7.0.0)"
 ]
 
-
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [
+  { include = "ds_project_arch_lab", from = "src" }
+]
+
+[tool.poetry.scripts]
+prepare-data = "ds_project_arch_lab.cli.prepare_data:main"

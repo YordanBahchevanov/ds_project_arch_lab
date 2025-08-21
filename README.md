@@ -55,3 +55,33 @@ To run the notebooks or pipeline, download the dataset and place it in: data/raw
 3. Unit tests should go in tests/.
 
 4. MLflow will track experiments locally in the mlruns/ directory (ignored by Git).
+
+## Data preparation CLI
+
+This project provides a command-line tool to preprocess and engineer features.
+
+### Example usage
+
+```powershell
+# Run the pipeline with default options
+poetry run prepare-data `
+  --input data/processed/clean_asthma_disease_data.csv `
+  --output-all data/processed/features_all.csv `
+  --output-x data/processed/X.csv `
+  --output-y data/processed/y.csv
+```
+
+### Options
+
+- --input (required): Path to the cleaned dataset (from Problem 3).
+- --output-all (required): Path to save the full feature table (features + target).
+- --output-x: Optional path to save only the features.
+- --output-y: Optional path to save only the target column.
+- --no-one-hot: Disable one-hot encoding of categorical features.
+- --no-scale: Disable scaling of continuous features.
+
+### Notes
+
+- Make sure you’ve installed dependencies with poetry install.
+- Run everything inside the Poetry environment: poetry run ....
+- Outputs are saved under data/processed/.
